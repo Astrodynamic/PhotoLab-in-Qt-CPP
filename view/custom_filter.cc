@@ -4,7 +4,7 @@
 
 #include "ui_custom_filter.h"
 
-namespace s21 {
+namespace PLab {
 CustomFilter::CustomFilter(QWidget *parent)
     : QDialog(parent), ui(new Ui::CustomFilter) {
   ui->setupUi(this);
@@ -31,7 +31,7 @@ void CustomFilter::on_cb_height_currentTextChanged(const QString &value) {
   ChangeSizeTable(row, col);
 }
 
-void CustomFilter::resizeEvent(QResizeEvent *event) {
+void CustomFilter::resizeEvent([[maybe_unused]] QResizeEvent *event) {
   for (int r = 0; r < ui->tw_table->horizontalHeader()->count(); ++r) {
     ui->tw_table->verticalHeader()->setSectionResizeMode(r,
                                                          QHeaderView::Stretch);
@@ -78,4 +78,4 @@ void CustomFilter::on_dbb_press_accepted() {
   }
   emit GetFilterMatrix(mat, row, col);
 }
-}  // namespace s21
+}  // namespace PLab

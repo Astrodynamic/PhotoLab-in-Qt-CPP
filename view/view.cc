@@ -2,7 +2,7 @@
 
 #include "./ui_view.h"
 
-namespace s21 {
+namespace PLab {
 View::View(QWidget *parent) : QMainWindow(parent), ui(new Ui::View) {
   ui->setupUi(this);
   connect(&custom_filter_, &CustomFilter::GetFilterMatrix, this,
@@ -247,4 +247,4 @@ void View::on_btn_clear_filter_clicked() {
   ShowFilteredImg();
 }
 
-}  // namespace s21
+}  // namespace PLab

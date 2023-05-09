@@ -7,9 +7,9 @@ ColorWindow::ColorWindow(QWidget *parent, ColorModel color_model,
                          std::function<void()> apply_callback)
     : QDialog(parent),
       ui(new Ui::ColorWindow),
-      color_model_(color_model),
-      color_callback_(color_callback),
-      apply_callback_(apply_callback) {
+      m_color_model(color_model),
+      m_color_callback(color_callback),
+      m_apply_callback(apply_callback) {
   ui->setupUi(this);
 
   setFixedSize(width(), height());
@@ -34,7 +34,7 @@ void ColorWindow::on_sld_hue_valueChanged(int value) {
 }
 
 void ColorWindow::on_sld_hue_sliderReleased() {
-  if (color_callback_) color_callback_(color_, color_model_);
+  if (m_color_callback) m_color_callback(m_color, m_color_model);
 }
 
 void ColorWindow::on_sld_saturation_valueChanged(int value) {
@@ -43,7 +43,7 @@ void ColorWindow::on_sld_saturation_valueChanged(int value) {
 }
 
 void ColorWindow::on_sld_saturation_sliderReleased() {
-  if (color_callback_) color_callback_(color_, color_model_);
+  if (m_color_callback) m_color_callback(m_color, m_color_model);
 }
 
 void ColorWindow::on_sld_value_brightness_valueChanged(int value) {
@@ -52,7 +52,7 @@ void ColorWindow::on_sld_value_brightness_valueChanged(int value) {
 }
 
 void ColorWindow::on_sld_value_brightness_sliderReleased() {
-  if (color_callback_) color_callback_(color_, color_model_);
+  if (m_color_callback) m_color_callback(m_color, m_color_model);
 }
 
 void ColorWindow::on_sx_hue_valueChanged(int value) {
@@ -68,19 +68,19 @@ void ColorWindow::on_sx_value_brightness_valueChanged(int value) {
 }
 
 void ColorWindow::on_btn_apply_clicked() {
-  if (apply_callback_) apply_callback_();
+  if (m_apply_callback) m_apply_callback();
   close();
 }
 
 void ColorWindow::UpdateColor() {
-  switch (color_model_) {
+  switch (m_color_model) {
     case ColorModel::kHSL:
-      color_ = QColor::fromHsl(ui->sld_hue->value() % 360,
+      m_color = QColor::fromHsl(ui->sld_hue->value() % 360,
                                ui->sld_saturation->value(),
                                ui->sld_value_brightness->value());
       break;
     case ColorModel::kHSV:
-      color_ = QColor::fromHsv(ui->sld_hue->value() % 360,
+      m_color = QColor::fromHsv(ui->sld_hue->value() % 360,
                                ui->sld_saturation->value(),
                                ui->sld_value_brightness->value());
       break;

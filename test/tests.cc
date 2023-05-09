@@ -7,7 +7,7 @@
 constexpr double error = 1e-1;
 
 TEST(Grayscale, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-bw-average.png");
@@ -27,7 +27,7 @@ TEST(Grayscale, test_1) {
 }
 
 TEST(Negative, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-negative.png");
@@ -47,7 +47,7 @@ TEST(Negative, test_1) {
 }
 
 TEST(Emboss, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-ebmoss.png");
@@ -64,7 +64,7 @@ TEST(Emboss, test_1) {
 }
 
 TEST(Sharpen, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-sharpen.png");
@@ -81,7 +81,7 @@ TEST(Sharpen, test_1) {
 }
 
 TEST(BoxBlur, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-box-blur.png");
@@ -98,7 +98,7 @@ TEST(BoxBlur, test_1) {
 }
 
 TEST(Gaussian, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-gaussian-blur.png");
@@ -115,7 +115,7 @@ TEST(Gaussian, test_1) {
 }
 
 TEST(Laplacian, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-outline.png");
@@ -132,7 +132,7 @@ TEST(Laplacian, test_1) {
 }
 
 TEST(SobelLeft, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-sobel-left.png");
@@ -149,7 +149,7 @@ TEST(SobelLeft, test_1) {
 }
 
 TEST(SobelRight, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-sobel-right.png");
@@ -166,7 +166,7 @@ TEST(SobelRight, test_1) {
 }
 
 TEST(SobelFull, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-sobel-left-and-right.png");
@@ -183,7 +183,7 @@ TEST(SobelFull, test_1) {
 }
 
 TEST(CustomFilter, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-outline.png");
@@ -207,7 +207,7 @@ TEST(CustomFilter, test_1) {
 }
 
 TEST(Brightness, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
   QImage img_2(":/sample-outline.png");
@@ -222,7 +222,7 @@ TEST(Brightness, test_1) {
 }
 
 TEST(Contrast, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
 
@@ -247,7 +247,7 @@ TEST(Contrast, test_1) {
 }
 
 TEST(HSL, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
 
@@ -260,7 +260,7 @@ TEST(HSL, test_1) {
 }
 
 TEST(HSV, test_1) {
-  s21::Model mdl;
+  PLab::Model mdl;
 
   QImage img_1(":/sample.png");
 

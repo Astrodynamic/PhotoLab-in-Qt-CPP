@@ -1,9 +1,9 @@
-#ifndef SRC_CONTROLLER_CONTROLLER_H_
-#define SRC_CONTROLLER_CONTROLLER_H_
+#ifndef PHOTOLAB_CONTROLLER_CONTROLLER_H_
+#define PHOTOLAB_CONTROLLER_CONTROLLER_H_
 
 #include "../model/model.h"
 
-namespace s21 {
+namespace PLab {
 
 class Controller {
  public:
@@ -40,6 +40,6 @@ class Controller {
   Model model_;
 };
 
-}  // namespace s21
+}  // namespace PLab
 
-#endif  // SRC_CONTROLLER_CONTROLLER_H_
+#endif  // PHOTOLAB_CONTROLLER_CONTROLLER_H_

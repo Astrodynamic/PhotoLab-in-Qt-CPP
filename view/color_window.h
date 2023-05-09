@@ -1,5 +1,5 @@
-#ifndef SRC_VIEW_COLOR_WINDOW_H_
-#define SRC_VIEW_COLOR_WINDOW_H_
+#ifndef PHOTOLAB_VIEW_COLOR_WINDOW_H_
+#define PHOTOLAB_VIEW_COLOR_WINDOW_H_
 
 #include <QDialog>
 #include <functional>
@@ -38,10 +38,10 @@ class ColorWindow : public QDialog {
   void UpdateColor();
 
   Ui::ColorWindow *ui;
-  ColorModel color_model_;
-  QColor color_;
-  std::function<void(QColor, ColorModel)> color_callback_;
-  std::function<void()> apply_callback_;
+  ColorModel m_color_model;
+  QColor m_color;
+  std::function<void(QColor, ColorModel)> m_color_callback;
+  std::function<void()> m_apply_callback;
 };
 
-#endif  // SRC_VIEW_COLOR_WINDOW_H_
+#endif  // PHOTOLAB_VIEW_COLOR_WINDOW_H_

@@ -1,6 +1,6 @@
 #include "model.h"
 
-namespace s21 {
+namespace PLab {
 
 QImage Model::Grayscale(const QImage &img) {
   if (!img.isNull()) {
@@ -251,4 +251,4 @@ QImage Model::Addition(const QImage &img_1, const QImage &img_2) {
   return result;
 }
 
-}  // namespace s21
+}  // namespace PLab

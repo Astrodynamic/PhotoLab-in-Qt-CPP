@@ -30,7 +30,6 @@
 
 # Executables
 *.exe
-*.out
 *.app
 *.i*86
 *.x86_64
@@ -51,7 +50,15 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-.idia
+# CMake Files
 CMakeLists.txt.*
-build*
+
+# MacOS files
 .DS_Store
+
+# IDE files
+.idea
+.vscode
+
+# Directory
+build*

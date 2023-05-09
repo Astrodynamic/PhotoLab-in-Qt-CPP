@@ -1,12 +1,12 @@
-#ifndef SRC_MODEL_MODEL_H_
-#define SRC_MODEL_MODEL_H_
+#ifndef PHOTOLAB_MODEL_MODEL_H_
+#define PHOTOLAB_MODEL_MODEL_H_
 
 #include <QColorDialog>
 #include <QImage>
 #include <QLabel>
 #include <vector>
 
-namespace s21 {
+namespace PLab {
 
 class Model {
  public:
@@ -36,13 +36,13 @@ class Model {
   QImage Convolution(const QImage &img, std::vector<std::vector<double>> mat,
                      int m, int n);
   QImage Addition(const QImage &img_1, const QImage &img_2);
-  unsigned char SaturateCastToUnsignedInt(int value) {
+  static unsigned char SaturateCastToUnsignedInt(int value) {
     if (value >= 0 && value <= 255) return static_cast<unsigned char>(value);
     if (value < 0) return 0;
     return 255;
   }
 };
 
-}  // namespace s21
+}  // namespace PLab
 
-#endif  // SRC_MODEL_MODEL_H_
+#endif  // PHOTOLAB_MODEL_MODEL_H_

@@ -1,5 +1,5 @@
-#ifndef SRC_VIEW_CUSTOM_FILTER_H_
-#define SRC_VIEW_CUSTOM_FILTER_H_
+#ifndef PHOTOLAB_VIEW_CUSTOM_FILTER_H_
+#define PHOTOLAB_VIEW_CUSTOM_FILTER_H_
 
 #include <QDialog>
 
@@ -7,7 +7,7 @@ namespace Ui {
 class CustomFilter;
 }
 
-namespace s21 {
+namespace PLab {
 
 class CustomFilter : public QDialog {
   Q_OBJECT
@@ -34,6 +34,6 @@ class CustomFilter : public QDialog {
   void ChangeSizeTable(int row, int col);
 };
 
-}  // namespace s21
+}  // namespace PLab
 
-#endif  // SRC_VIEW_CUSTOM_FILTER_H_
+#endif  // PHOTOLAB_VIEW_CUSTOM_FILTER_H_

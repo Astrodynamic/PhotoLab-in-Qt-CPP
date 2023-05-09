@@ -1,5 +1,5 @@
-#ifndef SRC_VIEW_VIEW_H_
-#define SRC_VIEW_VIEW_H_
+#ifndef PHOTOLAB_VIEW_VIEW_H_
+#define PHOTOLAB_VIEW_VIEW_H_
 
 #include <QFileDialog>
 #include <QMainWindow>
@@ -15,7 +15,7 @@ class View;
 }
 QT_END_NAMESPACE
 
-namespace s21 {
+namespace PLab {
 
 class View : public QMainWindow {
   Q_OBJECT
@@ -76,6 +76,6 @@ class View : public QMainWindow {
   bool is_orig_on_screen_ = true;
 };
 
-}  // namespace s21
+}  // namespace PLab
 
-#endif  // SRC_VIEW_VIEW_H_
+#endif  // PHOTOLAB_VIEW_VIEW_H_
